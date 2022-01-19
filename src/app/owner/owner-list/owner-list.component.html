@@ -1,0 +1,37 @@
+<div class="row"> 
+    <div class="offset-10 col-md-2">
+      <a href="#">Create owner</a>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Ower ID</th>
+              <th>Owner Name</th>
+              <th>Nationality</th>
+              <th>Grade</th>
+              <th>Joining Date</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let owner of owners">
+                <td>{{owner.Id}}</td>
+              <td>{{owner.Name}}</td>
+              <td>{{owner.Nationality}}</td>
+              <td>{{owner.SalaryGrade}}</td>
+              <td>{{owner.Joining_Date | date: 'dd/MM/yyyy'}}</td>
+              <td><button type="button" id="details" class="btn btn-light">Details</button></td>
+              <td><button type="button" id="update" class="btn btn-success">Update</button></td>
+              <td><button type="button" id="delete" class="btn btn-danger">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
